@@ -1,0 +1,132 @@
+.projects-section {
+  background-color: #000; /* pure black background */
+  color: #eee; /* light text */
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background-color: #111; /* dark card bg */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: brightness(0.85);
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.6);
+  animation: fadeInDown 0.4s ease forwards;
+}
+
+.overlay a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.overlay a:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Buttons styling override for dark theme */
+.btn-primary {
+  background-color: #fff;
+  /* border-color: #fff; */
+      color: black;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #fff;
+  /* border-color: #fff; */
+      color: black;
+}
+
+.btn-outline-light {
+  color: #eee;
+  /* border-color: #eee; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  background-color: #eee;
+  color: #000;
+}

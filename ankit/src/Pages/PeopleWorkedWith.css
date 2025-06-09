@@ -1,0 +1,98 @@
+.people-worked-with-section {
+  background-color: #121212;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #6f6f6f;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: left;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 50%;
+  padding: 1.8rem 1rem;
+  font-size: 0.75rem;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.timeline-content {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: #f1f1f1;
+  margin-top: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-circle {
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  .timeline-content {
+    margin-left: 3rem;
+  }
+}

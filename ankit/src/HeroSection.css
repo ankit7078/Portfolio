@@ -1,0 +1,283 @@
+.marketeer-hero {
+  position: relative;
+  height: 100vh;
+  /* background: url('./Images/ankit.jpg') no-repeat center center; */
+  background-color: #111;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Left Content */
+.left-content {
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding-left: 60px;
+  text-align: left;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  padding-left: 14%;
+}
+
+.hero-title {
+  font-size: 2.3rem;
+  font-weight: 200;
+  letter-spacing:7px;
+  margin-bottom: 10px;
+  margin-top: 180px;
+}
+
+.hero-title .italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 18rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #00c3ff;
+}
+
+/* Learn More */
+.learn-more-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: right center;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Animations */
+.animate-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-fade {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2rem;
+    margin-top: 80px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .social-icons {
+    margin-top: 150px;
+    gap: 10px;
+  }
+
+  .learn-more-text {
+    right: 3%;
+    font-size: 0.8rem;
+  }
+
+  .hamburger-menu {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .marketeer-hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .left-content {
+    padding-left: 0;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .learn-more-text {
+    display: none;
+  }
+
+  .hamburger-menu {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 30px;
+  right: -300px;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 60px 0 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.sidebar ul li a:hover {
+  color: #00c3ff;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+
+
+/* learn more  */
+.learn-more-text {
+  position: absolute;
+  top: 100%;
+  right: 3%;
+  transform-origin: right center;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-out forwards, bounceUpDown 2s infinite ease-in-out;
+  /* rotate(90deg) is inside animation */
+}
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: rotate(90deg) translateX(calc(-50% + 0px));
+  }
+  50% {
+    transform: rotate(90deg) translateX(calc(-50% - 10px));
+  }
+}

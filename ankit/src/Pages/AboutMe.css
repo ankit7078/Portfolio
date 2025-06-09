@@ -1,0 +1,68 @@
+.about-section {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #272626;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  filter: grayscale(100%) brightness(0.6);
+  transition: filter 0.4s ease;
+}
+
+.profile-img:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+.divider {
+  width: 40px;
+  border-top: 2px solid #efefef;
+  margin: 12px auto;
+}
+
+.experience-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.description {
+  font-size: 1rem;
+  max-width: 720px;
+  line-height: 1.7;
+  color: #bbb;
+  margin-top: 1rem;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.custom-hover {
+  transition: all 0.3s ease;
+}
+
+.custom-hover:hover {
+  background-color: white !important;
+  color: black !important;
+  border-color: black !important;
+  border: 2px solid white;
+}
